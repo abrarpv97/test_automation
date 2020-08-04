@@ -94,9 +94,8 @@ doctype_js = {
 
 scheduler_events = {
 #	"all": [
-#        "test_automation.task.payroll_entry"
- 	#	"test_automation.tasks.all"
-# 	]
+# 		"test_automation.tasks.all"
+# 	],
 # 	"daily": [
 # 		"test_automation.tasks.daily"
 # 	],
@@ -106,9 +105,10 @@ scheduler_events = {
 # 	"weekly": [
 # 		"test_automation.tasks.weekly"
 # 	]
-# 	"monthly": [
+ 	"monthly": [
+		"test_automation.task.payroll_entry"
 # 		"test_automation.tasks.monthly"
-# 	]
+ 	]
 }
 
 # Testing

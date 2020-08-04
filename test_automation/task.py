@@ -2,7 +2,7 @@ import frappe
 from dateutil.relativedelta import relativedelta
 from datetime import date 
 from calendar import monthrange
-from frappe.utils import cint, flt, nowdate, add_days, getdate, fmt_money, add_to_date, DATE_FORMAT, date_diff
+from frappe.utils import nowdate
 
 def payroll_entry():
     paryroll_entry = frappe.new_doc('Payroll Entry')
@@ -25,7 +25,9 @@ def payroll_entry():
     employee_list = frappe.db.sql("""select employee,employee_name,department,designation
         from tabEmployee where status = 'Active'""",as_dict = 1)
 
+    number_of_employees = 0
     for item in employee_list:
+        number_of_employees = number_of_employees + 1
         paryroll_entry.append('employees', {
             'employee': item.employee,
             'employee_name': item.employee_name,
@@ -33,7 +35,7 @@ def payroll_entry():
             'designation': item.designation,
         })
 
-    paryroll_entry.number_of_employees = 3
+    paryroll_entry.number_of_employees = number_of_employees
     paryroll_entry.save()
     paryroll_entry.submit()
 
