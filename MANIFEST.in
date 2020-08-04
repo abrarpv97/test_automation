@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include test_automation *.css
+recursive-include test_automation *.csv
+recursive-include test_automation *.html
+recursive-include test_automation *.ico
+recursive-include test_automation *.js
+recursive-include test_automation *.json
+recursive-include test_automation *.md
+recursive-include test_automation *.png
+recursive-include test_automation *.py
+recursive-include test_automation *.svg
+recursive-include test_automation *.txt
+recursive-exclude test_automation *.pyc
