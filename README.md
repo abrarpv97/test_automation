@@ -1,6 +1,6 @@
 ## test-automation
 
-payroll process automation using sceduler
+payroll process automation using scheduler
 
 #### License
 
